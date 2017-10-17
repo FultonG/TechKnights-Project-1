@@ -1,0 +1,57 @@
+ <!DOCTYPE html>
+ <html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <title>TechKnights</title>
+      <base href="/">
+    <link rel="stylesheet" href="/css/styles.css">
+
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular-route.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular-resource.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+  <!-- ANGULAR CUSTOM -->
+   <script src="js/controllers/MainCtrl.js"></script>
+   <script src="js/controllers/WorkshopCtrl.js"></script>
+   <script src="js/controllers/LeaderboardCtrl.js"></script>
+   <script src="js/appRoutes.js"></script>
+   <script src="js/app.js"></script>
+ </head>
+
+ <body ng-app="techKnights" ng-controller="MainController">
+
+
+   <div class="container">
+     <div class="row">
+       <div class="col-md-6 col-md-offset-3 text-center">
+         <h1>Welcome to TechKnights!</h1>
+       </div>
+     </div>
+
+     <!-- Our navbar that will change the content on the page-->
+     <div class="row">
+       <nav class="navbar navbar-inverse">
+         <ul class="nav navbar-nav">
+           <li>
+             <a href='/'>Home</a>
+           </li>
+           <li>
+             <a href='/workshops'>Workshops</a>
+           </li>
+           <li>
+             <a href='/leaderboard'>Leaderboard</a>
+           </li>
+         </ul>
+       </nav>
+     </div>
+
+     <!-- This is where our dynamic content will show up-->
+     <div class="row" ng-view>
+     </div>
+   </div>
+ </body>
+
+ </html>
