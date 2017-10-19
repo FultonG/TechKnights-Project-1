@@ -7,13 +7,14 @@
       <base href="/">
     <link rel="stylesheet" href="/css/styles.css">
 
+  <!-- CDN Links to Angular (angular, angular-route, angular-resource), Bootstrap CSS/JS -->
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular-route.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular-resource.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
-  <!-- ANGULAR CUSTOM -->
+  <!-- The Custom Angular Files That We Have Created -->
    <script src="js/controllers/MainCtrl.js"></script>
    <script src="js/controllers/WorkshopCtrl.js"></script>
    <script src="js/controllers/LeaderboardCtrl.js"></script>
@@ -21,7 +22,8 @@
    <script src="js/app.js"></script>
  </head>
 
- <body ng-app="techKnights" ng-controller="MainController">
+<!-- tell angular to use the app techKnights in the body -->
+ <body ng-app="techKnights">
 
 
    <div class="container">
@@ -36,6 +38,7 @@
        <nav class="navbar navbar-inverse">
          <ul class="nav navbar-nav">
            <li>
+             <!-- link to the default route -->
              <a href='/'>Home</a>
            </li>
            <li>
@@ -51,6 +54,7 @@
      <!-- This is where our dynamic content will show up-->
      <div class="row" ng-view>
      </div>
+
    </div>
  </body>
 
