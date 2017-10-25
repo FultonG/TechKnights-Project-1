@@ -2,6 +2,9 @@ var express = require('express');
 var app = express();
 var path = require('path');
 
+// Hello World
+console.log("Server has started");
+
 //expose the files in the public folder so that the HTML can use it
 app.use(express.static('public'));
 
