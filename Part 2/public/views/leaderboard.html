@@ -32,4 +32,12 @@
         </tr>
       </tbody>
     </table>
+    <form class="form-inline" ng-submit="add()">
+      <div class="form-group">
+        <input class="form-control" placeholder="First Name" ng-model="user.first">
+        <input class="form-control" placeholder="Last Name" ng-model="user.last">
+        <input type="email" class="form-control" placeholder="Email" ng-model="user.email">
+        <button type="submit" class="btn btn-default">Add</button>
+      </div>
+    </form>
   </div>
