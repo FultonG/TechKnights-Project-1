@@ -21,6 +21,12 @@ $routeProvider
       //tells the app to use the leaderboard view as a template
       templateUrl: 'views/leaderboard.html',
       controller: 'LeaderboardController'
+    })
+
+    //Sign in page
+    .when('/signin', {
+      templateUrl: 'views/signin.html',
+      controller: 'SignInController'
     });
 
 $locationProvider.html5Mode(true);
