@@ -4,4 +4,28 @@ angular.module('LeaderboardCtrl', []).controller('LeaderboardController', functi
     //value of the title variable within the scope of the LeaderboardController
     $scope.title = 'TechKnights Leaderboard';
 
+    $scope.persons = [
+      {
+        first : "Fulton",
+        last : "Garcia",
+        email: "Fulton@knights.ucf.edu",
+        points: 2
+      },
+      {
+        first : "Perla",
+        last : "Del Castillo",
+        email: "perlitadelcastillo@gmail.com",
+        points: 5
+      }
+    ];
+
+    $scope.plus = function(person){
+      person.points++;
+    }
+
+    $scope.minus = function(person){
+      if(person.points > 0)
+        person.points--;
+    }
+
 });

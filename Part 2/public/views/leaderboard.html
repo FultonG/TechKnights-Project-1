@@ -1,32 +1,34 @@
 <div class="col-md-12">
   <!-- adds the value of title into the HTML -->
-  <h2>{{title}}</h2>
-  
+  <h2 class="text-center">{{title}}</h2>
+
   <!-- We will later be generating one dynamically with the information from our database
   and Angular -->
   <table class="table table-striped">
-      <thead>
+    <thead>
         <tr>
-          <th>Firstname</th>
-          <th>Lastname</th>
+          <th>First Name</th>
+          <th>Last Name</th>
           <th>Email</th>
+          <th>Points</th>
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>John</td>
-          <td>Doe</td>
-          <td>john@example.com</td>
-        </tr>
-        <tr>
-          <td>Mary</td>
-          <td>Moe</td>
-          <td>mary@example.com</td>
-        </tr>
-        <tr>
-          <td>July</td>
-          <td>Dooley</td>
-          <td>july@example.com</td>
+        <tr ng-repeat="person in persons | orderBy : '-points'">
+          <td>{{person.first}}</td>
+          <td>{{person.last}}</td>
+          <td>{{person.email}}</td>
+          <td>{{person.points}}</td>
+          <td>
+            <span class="input-group-btn">
+              <button type="button" class="btn btn-default" ng-click="plus(person)">
+                  <span class="glyphicon glyphicon-plus"></span>
+              </button>
+              <button type="button" class="btn btn-default" ng-click="minus(person)">
+                  <span class="glyphicon glyphicon-minus"></span>
+              </button>
+            </span>
+          </td>
         </tr>
       </tbody>
     </table>
